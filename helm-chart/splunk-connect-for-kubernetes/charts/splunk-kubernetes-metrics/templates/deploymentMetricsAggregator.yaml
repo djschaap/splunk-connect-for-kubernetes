@@ -65,6 +65,8 @@ spec:
           - name: secrets
             mountPath: /fluentd/etc/splunk
             readOnly: true
+      securityContext:
+        runAsNonRoot: false
       volumes:
       - name: conf-configmap
         configMap:
